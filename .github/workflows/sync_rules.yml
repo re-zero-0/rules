@@ -1,0 +1,128 @@
+name: Build rules
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '10 0 * * *'
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - 'rule/**'
+      - 'personal/**'
+      - '**/*.mrs'
+      - '**/*.yaml'
+      - '**/*.txt'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Add token
+        uses: actions/checkout@v4
+        with:
+          repository: akikawazero/rules
+          token: ${{ secrets.GH_TOKEN }}
+
+      - name: Set variables
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          echo "BUILDTIME=$(TZ=Asia/Shanghai date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
+          echo "REPODIR=$PWD" >> $GITHUB_ENV
+
+      - name: Sync with upstream
+        run: |
+          git checkout master
+          git remote add upstream https://github.com/blackmatrix7/ios_rule_script.git
+          git fetch --depth=1 upstream
+          mkdir -p ./backup/
+          # 备份自定义文件
+          cp -f .gitignore README.md .github/workflows/sync_rules.yml ./backup/
+          # 创建scripts目录并备份脚本
+          mkdir -p ./scripts/
+          if [ -f "./scripts/sync.sh" ]; then
+            cp -f ./scripts/sync.sh ./backup/
+          fi
+          # 确保personal目录不会被覆盖
+          if [ -d "./personal" ]; then
+            mkdir -p ./backup/personal
+            cp -rf ./personal/* ./backup/personal/
+          fi
+          git merge upstream/master --strategy-option theirs --allow-unrelated-histories --no-edit
+          # 恢复自定义文件
+          cp -f ./backup/.gitignore .gitignore
+          cp -f ./backup/README.md README.md
+          cp -f ./backup/sync_rules.yml .github/workflows/sync_rules.yml
+          # 确保scripts目录存在
+          mkdir -p ./scripts/
+          # 如果有备份的sync.sh则恢复，否则从主脚本复制
+          if [ -f "./backup/sync.sh" ]; then
+            cp -f ./backup/sync.sh ./scripts/sync.sh
+          else
+            # 检查是否存在script/sync.sh，如有则复制到scripts目录
+            if [ -f "./script/sync.sh" ]; then
+              cp -f ./script/sync.sh ./scripts/sync.sh
+            fi
+          fi
+          # 恢复personal目录
+          if [ -d "./backup/personal" ]; then
+            mkdir -p ./personal
+            cp -rf ./backup/personal/* ./personal/
+          fi
+
+      - name: Background run subconverter
+        run: |
+          curl -s https://api.github.com/repos/tindy2013/subconverter/releases \
+            | grep "browser_download_url.*subconverter_linux64.tar.gz" \
+            | head -n 1 \
+            | cut -d '"' -f 4 \
+            | xargs wget -q
+          tar -xf subconverter_linux64.tar.gz
+          ./subconverter/subconverter &
+          python3 -m http.server 8080 --bind 127.0.0.1 --directory './rule/' &
+
+      - name: Background run mihomo
+        run: |
+          curl -s https://api.github.com/repos/MetaCubeX/mihomo/releases \
+            | grep "browser_download_url.*mihomo-linux-amd64-alpha.*.deb" \
+            | head -n 1 \
+            | cut -d '"' -f 4 \
+            | xargs wget -q -O mihomo-linux-amd64-alpha.deb
+          sudo apt install --fix-missing ./mihomo-linux-amd64-alpha.deb
+          /usr/bin/mihomo &
+
+      - name: Create personal directory if not exists
+        run: |
+          mkdir -p ./personal
+          # 如果personal目录为空，添加一个示例文件
+          if [ -z "$(ls -A ./personal 2>/dev/null)" ]; then
+            echo "# 此目录用于存放自定义规则，支持.list和.yaml格式" > ./personal/README.md
+          fi
+
+      - name: Check sync.sh exists
+        run: |
+          # 确保脚本存在
+          if [ ! -f "./scripts/sync.sh" ]; then
+            echo "错误：找不到脚本 ./scripts/sync.sh"
+            exit 1
+          fi
+          # 确保脚本可执行
+          chmod +x ./scripts/sync.sh
+          
+      - name: start convert
+        run: |
+          ./scripts/sync.sh
+
+      - name: Commit and Push Changes
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git add --all
+            # 添加[skip ci]标记以防止再次触发workflow
+            git commit -m "${{ env.BUILDTIME }} 规则更新 [skip ci]"
+            git push origin master
+          else
+            echo "No changes to commit"
+          fi
