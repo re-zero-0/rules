@@ -1,0 +1,8 @@
++.exttwitch.tv
++.jtvnw.net
++.livevideo.net
++.ttvnw.net
++.twitchext.rootonline.de
++.twitch.tv
++.twitchcdn.net
++.twitchsvc.net

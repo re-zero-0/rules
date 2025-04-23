@@ -1,0 +1,5 @@
++.dai.ly
++.dailymotion.com
++.dmevent.net
++.dmcdn.net
++.dmxleo.com

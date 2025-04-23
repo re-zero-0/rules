@@ -1,0 +1,13 @@
+rthklive2lh.akamaihd.net
+rthkradio1live.akamaized.net
+rthkradio2live.akamaized.net
+rthkradio3live.akamaized.net
+rthkradio4live.akamaized.net
+rthkradio5live.akamaized.net
+rthkradiocmgrgblive.akamaized.net
+rthkradiocnrhklive.akamaized.net
+rthkradiopthlive.akamaized.net
+rthktv31live.akamaized.net
+rthktv32live.akamaized.net
++.rthk.hk
++.rthk.org.hk

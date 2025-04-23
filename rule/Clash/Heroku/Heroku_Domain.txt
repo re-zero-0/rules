@@ -1,0 +1,12 @@
++.codei.sh
++.codeish.co
++.codeish.io
++.herokuapp.com
++.herokucharge.com
++.heroku.co
++.heroku.com
++.heroku.me
++.herokuapp.com
++.herokucdn.com
++.herokucharge.com
++.herokussl.com

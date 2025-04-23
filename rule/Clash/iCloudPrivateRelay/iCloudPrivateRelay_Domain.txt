@@ -1,0 +1,6 @@
+maskapi.fe.appledns.net
+maskapi.icloud.com
+maskt.appledns.net
+mask.appledns.net
++.maskh2.icloud.com
++.mask.icloud.com

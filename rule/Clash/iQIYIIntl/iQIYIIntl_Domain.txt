@@ -1,0 +1,6 @@
+cache.video.iqiyi.com
++.inter.iqiyi.com
++.intlrcd.iqiyi.com
++.intlsubscription.iqiyi.com
++.intl.iqiyi.com
++.iq.com

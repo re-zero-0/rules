@@ -1,0 +1,8 @@
++.delvenetworks.com
++.limelight.com
++.lldns.net
++.llnwtrials.com
++.llnw.com
++.llnw.net
++.llnwd.net
++.llnwi.net

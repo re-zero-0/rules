@@ -1,0 +1,8 @@
++.lin.ee
++.lineapps.com
++.linecdn.net
++.linescdn.net
++.line.me
++.linecorp.com
++.naver.jp
++.nhncorp.jp

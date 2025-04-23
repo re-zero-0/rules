@@ -1,0 +1,7 @@
+cdnfoxnetworksgroupgreen.akamaized.net
+d3cv4a9a9wh0bt.cloudfront.net
+foxsports01i.akamaihd.net
+foxsports02i.akamaihd.net
+foxsports03i.akamaihd.net
+staticasiafox.akamaized.net
++.foxplus.com

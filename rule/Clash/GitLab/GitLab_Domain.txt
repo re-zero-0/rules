@@ -1,0 +1,6 @@
++.gitlabassets.osscnhongkong.aliyuncs.com
++.gitlabstatic.net
++.gitlab.com
++.gitlab.net
++.gitterstatic.net
++.gitter.im

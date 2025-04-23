@@ -1,0 +1,3 @@
++.riotcdn.net
++.riotgames.com
++.wr.pvp.net

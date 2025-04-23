@@ -1,0 +1,11 @@
++.slackcore.com
++.slackedge.com
++.slackfiles.com
++.slackimgs.com
++.slackmsgs.com
++.slackredir.net
++.slack.com
++.slackb.com
++.slackcertified.com
++.slackdemo.com
++.slackhq.com

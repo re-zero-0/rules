@@ -1,0 +1,5 @@
++.buypassssl.com
++.buypass.com
++.buypass.no
++.buypass.se
++.minid.no

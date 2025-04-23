@@ -1,0 +1,12 @@
+apple.imap.mail.yahoo.com
+apple.smtp.mail.yahoo.com
+imapmail.outlook.com
+imap.gmail.com
+outlook.office365.com
+pop.gmail.com
+smtpmail.outlook.com
+smtp.gmail.com
+smtp.office365.com
++.imap.yandex.com
++.m.hotmail.com
++.smtp.yandex.com

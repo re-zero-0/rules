@@ -1,0 +1,12 @@
++.bgoldcdn.xitu.io
++.juejin.im
++.mirrorgoldcdn.xitu.io
++.p1juejin.byteimg.com
++.p2juejin.byteimg.com
++.p3juejin.byteimg.com
++.p4juejin.byteimg.com
++.p5juejin.byteimg.com
++.p6juejin.byteimg.com
++.p7juejin.byteimg.com
++.p8juejin.byteimg.com
++.p9juejin.byteimg.com

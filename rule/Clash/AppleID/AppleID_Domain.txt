@@ -1,0 +1,4 @@
+appleid.apple.com
+appleid.cdnapple.com
+gsa.apple.com
+idmsa.apple.com

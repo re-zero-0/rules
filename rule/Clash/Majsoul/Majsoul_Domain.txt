@@ -1,0 +1,11 @@
++.game.majsoul.com
++.gatewaycdn.majsoul.com
++.gatewayhw.majsoul.com
++.gatewaysy.catmjstudio.com
++.gatewaysy.majsoul.com
++.gatewayv2.majsoul.com
++.lbcdn.majsoul.com
++.lbhw.majsoul.com
++.lbsy.majsoul.com
++.lbv2.majsoul.com
++.majsoulhkclient.cnhongkong.log.aliyuncs.com
