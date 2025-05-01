@@ -1,3 +1,14 @@
+# NAME: Global
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2025-04-30 02:14:50
+# DOMAIN: 89
+# DOMAIN-KEYWORD: 36
+# DOMAIN-SUFFIX: 31353
+# IP-CIDR: 112
+# IP-CIDR6: 4
+# PROCESS-NAME: 1
+# TOTAL: 31595
 payload:
   - '1password.drift.click'
   - 'adobeereg.com'
@@ -5068,7 +5079,6 @@ payload:
   - '+.chatsex.xxx'
   - '+.chatter.com'
   - '+.chatterbate.io'
-  - '+.chaturbate.com'
   - '+.chatwhores.com'
   - '+.chatwhores.net'
   - '+.chatwhores.org'
@@ -19037,7 +19047,6 @@ payload:
   - '+.rutracker.cr'
   - '+.rutracker.me'
   - '+.rutracker.nl'
-  - '+.rutracker.org'
   - '+.rutrecker.net'
   - '+.ruvideos.net'
   - '+.rvc.ac.uk'
@@ -21490,6 +21499,7 @@ payload:
   - '+.thothub.to'
   - '+.thottok.com'
   - '+.thotvids.com'
+  - '+.threads.com'
   - '+.thri.xxx'
   - '+.thrixxx.com'
   - '+.thtmod1.com'
@@ -25921,6 +25931,7 @@ payload:
   - '+.chapm25.com'
   - '+.character.ai'
   - '+.chatnook.com'
+  - '+.chaturbate.com'
   - '+.checkgfw.com'
   - '+.chengmingmag.com'
   - '+.chenguangcheng.com'
@@ -27225,7 +27236,6 @@ payload:
   - '+.got-game.org'
   - '+.gotdns.ch'
   - '+.gotgeeks.com'
-  - '+.gotquestions.org'
   - '+.gotrusted.com'
   - '+.gotw.ca'
   - '+.gov.taipei'
@@ -27636,7 +27646,6 @@ payload:
   - '+.identi.ca'
   - '+.idiomconnection.com'
   - '+.idlcoyote.com'
-  - '+.idope.se'
   - '+.idouga.com'
   - '+.idreamx.com'
   - '+.idsam.com'
@@ -28716,6 +28725,7 @@ payload:
   - '+.newlandmagazine.com.au'
   - '+.newmitbbs.com'
   - '+.newnews.ca'
+  - '+.news.mt.co.kr'
   - '+.news1.kr'
   - '+.news100.com.tw'
   - '+.newsancai.com'
@@ -29536,6 +29546,7 @@ payload:
   - '+.rusvpn.com'
   - '+.ruten.com.tw'
   - '+.rutracker.net'
+  - '+.rutracker.org'
   - '+.rutube.ru'
   - '+.ruyiseek.com'
   - '+.rxhj.net'
@@ -29994,7 +30005,6 @@ payload:
   - '+.stumbleupon.com'
   - '+.stupidvideos.com'
   - '+.stweetly.com'
-  - '+.subhd.tv'
   - '+.substack.com'
   - '+.successfn.com'
   - '+.sueddeutsche.de'
