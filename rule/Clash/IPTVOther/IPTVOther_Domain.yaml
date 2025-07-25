@@ -1,3 +1,10 @@
+# NAME: IPTVOther
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2025-06-06 09:20:00
+# DOMAIN: 2299
+# IP-CIDR: 515
+# TOTAL: 2814
 payload:
   - '0813a4e76b5d404a97a4070b8e087bc4.mediatailor.us-east-1.amazonaws.com'
   - '0b1ea79d9170498c91073ff8c460de18.mediatailor.us-west-2.amazonaws.com'
